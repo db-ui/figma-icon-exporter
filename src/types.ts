@@ -23,6 +23,11 @@ export type IconNameConfigType = {
    * Change the separator, defaults to '_'
    */
   separator?: string;
+
+  /**
+   * Replaces symbols(and,or,...), defaults to true
+   */
+  cleanSymbols?: string;
 };
 
 export type OptionsType = {

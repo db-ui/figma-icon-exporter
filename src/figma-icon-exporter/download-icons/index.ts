@@ -2,6 +2,9 @@ import { DownloadTaskType } from "../../types";
 import { createWriteStream } from "fs";
 import axios from "axios";
 
+const cleanSymbols = (iconName: string): string =>
+  iconName.replaceAll("&", "and").replaceAll("/", "or");
+
 export const downloadIcons = async ({
   icon,
   resolvedImages,
@@ -30,8 +33,17 @@ export const downloadIcons = async ({
         } else {
           iconName = iconName.trim().replaceAll(" ", "_");
         }
+
+        if (
+          iconNameConfig.cleanSymbols === undefined ||
+          iconNameConfig.cleanSymbols
+        ) {
+          iconName = cleanSymbols(iconName);
+        }
       } else {
-        iconName = iconName.toLowerCase().trim().replaceAll(" ", "_");
+        iconName = cleanSymbols(
+          iconName.toLowerCase().trim().replaceAll(" ", "_"),
+        );
       }
 
       const filePath = `${icon.dir}/${iconName}.svg`;
