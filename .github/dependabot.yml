@@ -1,0 +1,22 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    pull-request-branch-name:
+      separator: "-"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    pull-request-branch-name:
+      separator: "-"
+    groups:
+      typescript-eslint:
+        patterns:
+          - "@typescript-eslint*"
+        update-types:
+          - "minor"
+          - "patch"
