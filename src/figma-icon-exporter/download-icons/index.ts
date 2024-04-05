@@ -5,6 +5,9 @@ import axios from "axios";
 const cleanSymbols = (iconName: string): string =>
   iconName.replaceAll("&", "and").replaceAll("/", "or");
 
+const overwriteSeperator = (iconName: string, separator: string): string =>
+  iconName.trim().replaceAll("-", separator).replaceAll(" ", separator);
+
 export const downloadIcons = async ({
   icon,
   resolvedImages,
@@ -29,9 +32,9 @@ export const downloadIcons = async ({
         }
 
         if (iconNameConfig.separator) {
-          iconName = iconName.trim().replaceAll(" ", iconNameConfig.separator);
+          iconName = overwriteSeperator(iconName, iconNameConfig.separator);
         } else {
-          iconName = iconName.trim().replaceAll(" ", "_");
+          iconName = overwriteSeperator(iconName, "_");
         }
 
         if (
@@ -42,7 +45,7 @@ export const downloadIcons = async ({
         }
       } else {
         iconName = cleanSymbols(
-          iconName.toLowerCase().trim().replaceAll(" ", "_"),
+          (iconName = overwriteSeperator(iconName.toLowerCase(), "_")),
         );
       }
 
