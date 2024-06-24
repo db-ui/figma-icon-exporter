@@ -24,7 +24,7 @@
     "generate:icon-fonts": "npx @db-ui/gif --src ./icons --variants filled inverted --fontName db-ux --withSizes true --debug true"
   },
   "dependencies": {
-    "axios": "1.6.8",
+    "axios": "1.7.2",
     "commander": "^12.1.0",
     "dotenv": "16.4.5",
     "fs-extra": "^11.2.0",
