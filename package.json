@@ -20,6 +20,7 @@
     "tsc": "tsc",
     "lint": "eslint src --ext ts",
     "prepare": "husky",
+    "pretest": "rm -rf icons",
     "test": "jest --detectOpenHandles --runInBand --forceExit",
     "generate:icon-fonts": "npx @db-ui/gif --src ./icons --variants filled inverted --fontName db-ux --withSizes true --debug true"
   },
