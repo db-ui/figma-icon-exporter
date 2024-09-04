@@ -9,10 +9,10 @@ describe("simple", () => {
         "👋 Welcome & Getting Started",
         "🪜 Overview",
         "🗂️ Changelog",
-        "------ 🔆 I C O N S -----",
+        "---",
         "----------",
         "🖼️ Cover",
-        "x--Placeholder",
+        "Placeholder + Templates",
       ],
       iconNameConfig: {
         replacements: [
