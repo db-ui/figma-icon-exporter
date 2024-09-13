@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/cli-progress": "^3.11.6",
     "@types/fs-extra": "^11.0.4",
-    "@types/jest": "^29.5.5",
+    "@types/jest": "^29.5.13",
     "@types/node": "^22.5.4",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^6.7.2",
