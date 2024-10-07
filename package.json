@@ -30,7 +30,7 @@
     "dotenv": "16.4.5",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.0",
-    "inquirer": "^11.1.0"
+    "inquirer": "^12.0.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.6",
