@@ -11,7 +11,7 @@ const action = async (_: string, options: { _optionValues: OptionsType }) => {
 };
 
 startProgram(
-	'@db-ui/fie - Figma Icon Exporter',
+	'@db-ux/fie - Figma Icon Exporter',
 	'CLI to export icons from figma file',
 	fieOptions,
 	action
