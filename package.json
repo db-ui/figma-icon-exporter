@@ -2,6 +2,7 @@
   "name": "@db-ui/fie",
   "version": "0.0.0",
   "description": "'fie' or 'figma icon exporter' downloads all icons from figma",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/db-ui/mono.git"
