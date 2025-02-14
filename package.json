@@ -1,15 +1,15 @@
 {
-  "name": "@db-ui/fie",
+  "name": "@db-ux/fie",
   "version": "0.0.0",
   "description": "'fie' or 'figma icon exporter' downloads all icons from figma",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/db-ui/mono.git"
+    "url": "https://github.com/db-ux-design-system/figma-icon-exporter.git"
   },
   "license": "Apache-2.0",
   "bin": {
-    "@db-ui/fie": "dist/index.js"
+    "@db-ux/fie": "dist/index.js"
   },
   "main": "index.js",
   "files": [
@@ -23,7 +23,7 @@
     "prepare": "husky",
     "pretest": "rimraf icons",
     "test": "jest --detectOpenHandles --runInBand --forceExit",
-    "generate:icon-fonts": "npx @db-ui/gif --src ./icons --variants filled inverted --fontName db-ux --withSizes true --debug true"
+    "generate:icon-fonts": "npx --no @db-ux/icon-font-tools --src ./icons --variants filled inverted --fontName db-ux --withSizes true --debug true"
   },
   "dependencies": {
     "axios": "1.7.9",
@@ -34,6 +34,7 @@
     "inquirer": "^12.3.3"
   },
   "devDependencies": {
+    "@db-ux/icon-font-tools": "^1.0.0",
     "@types/cli-progress": "^3.11.6",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.14",
